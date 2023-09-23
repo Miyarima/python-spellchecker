@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+
+<div class="container" role="main">
+    <div class="center page-header">
+        <h1>All words</h1>
+    </div>
+    <p class="center"><strong>{{ count }}</strong></p><br>
+    {% if res != [] %}
+        <br><div class="center all-words">
+            <table class="table">
+                <tr class="tr-head">
+                    <th class="th"></th>
+                    <th class="th"></th>
+                    <th class="th"></th>
+                    <th class="th"></th>
+                </tr>
+                {% for i in range(0, count, 4) %}
+                <tr>
+                  <td class="td">{{ res[i] }}</td>
+                  <td class="td">{{ res[i+1] }}</td>
+                  <td class="td">{{ res[i+2] }}</td>
+                  <td class="td">{{ res[i+3] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+                {# <p>{{ word }}</p><br> #}
+        </div>
+    {% endif %}
+</div>
+
+{% include 'footer.html' %}

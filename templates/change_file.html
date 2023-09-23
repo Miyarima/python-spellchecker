@@ -1,0 +1,32 @@
+{% include 'header.html' %}
+
+<div class="container" role="main">
+    <div class="center page-header">
+        <h1>File changing</h1>
+        <p><strong>Current file: {{ res }}</strong></p>
+    </div>
+    <form role="form" method="POST" action="{{ url_for('change_file_post') }}">
+        <p class="center">Choose the file you want to change to</p>
+        <div class="file-row">
+            <input class="radio" type="radio" name="file" value="dictionary.txt">
+            <p><strong>Dictionary</strong></p>
+        </div>
+        <div class="file-row">
+            <input class="radio" type="radio" name="file" value="tiny_dictionary.txt">
+            <p><strong>Tiny dictionary</strong></p>
+        </div>
+        <div class="file-row">
+            <input class="radio" type="radio" name="file" value="frequency.txt">
+            <p><strong>Frequency</strong></p>
+        </div>
+        <div class="file-row">
+            <input class="radio" type="radio" name="file" value="tiny_frequency.txt">
+            <p><strong>Tiny frequency</strong></p>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Search</button>
+        </div>
+    </form>
+</div>
+
+{% include 'footer.html' %}

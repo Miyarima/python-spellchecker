@@ -1,0 +1,27 @@
+{% include 'header.html' %}
+
+<div class="container" role="main">
+    <div class="center page-header">
+        <h1>Check if exists</h1>
+    </div>
+    {% if res != "" %}
+        <div class="center">
+            {% if res == "yes" %}
+                <p><strong>It does exist</strong></p><br>
+            {% elif res == "no" %}
+                <p><strong>It doesn't exist</strong></p><br>
+            {% endif %}
+        </div>
+    {% endif %}
+    <form role="form" method="POST" action="{{ url_for('check_if_exists_post') }}">
+        <p class="center">Which word would you like to look up?</p>
+        <div class="row">
+            <input class="input" type="input" name="word" value="" placeholder="Word..">
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Search</button>
+        </div>
+    </form>
+</div>
+
+{% include 'footer.html' %}

@@ -1,0 +1,38 @@
+{% include 'header.html' %}
+
+<div class="container" role="main">
+    <div class="center page-header">
+        <h1>Remove</h1>
+    </div>
+    {% if res != "" %}
+        {% if res == "That word doesn't exist" %}
+            <div class="center">
+                <p><strong>{{ res }}</strong></p><br>
+            </div>
+        {% else %}
+            <div class="center">
+                    <p><strong>The word {{ res }} has been removed</strong></p><br>
+            </div>
+        {% endif %}
+    {% endif %}
+    <form role="form" method="POST" action="{{ url_for('remove_post') }}">
+        <p class="center">Which word would you like to remove?</p>
+        <div class="row">
+            <input class="input" type="input" name="word" value="" placeholder="Word..">
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-success btn-lg btn-block">remove</button>
+        </div>
+    </form>
+    {% if words != [] %}
+        <br><div class="center">
+            <p><strong>These words have been removed</strong></p><br>
+            <p><strong>-----------------------------------------------</strong></p><br>
+            {% for word in words %}
+                <p><strong>{{ word }}</strong></p><br>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+
+{% include 'footer.html' %}

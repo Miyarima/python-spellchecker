@@ -1,0 +1,25 @@
+{% include 'header.html' %}
+
+<div class="container" role="main">
+    <div class="center page-header">
+        <h1>Suffix search</h1>
+    </div>
+    <form role="form" method="POST" action="{{ url_for('suffix_post') }}">
+        <p class="center">Which suffix would you like to look up?</p>
+        <div class="row">
+            <input class="input" type="input" name="word" value="" placeholder="Word..">
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Search</button>
+        </div>
+    </form>
+    {% if res != [] %}
+        <br><div class="center">
+            {% for word in res %}
+                <p><strong>{{ word }}</strong></p><br>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+
+{% include 'footer.html' %}

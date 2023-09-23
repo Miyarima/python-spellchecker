@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Quicksand&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    padding-top: 4em;
+    padding-bottom: 2em;
+    line-height: 1.4em;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+footer {
+    margin-top: 2em;
+}
+
+/* MISC */
+
+.div-center {
+    margin: 0 auto;
+    padding: 0.5em;
+}
+
+.my-btn {
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    width: 150px;
+    height: 2em;
+    border: 1px solid #222;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.my-btn:hover {
+    background-color: #aaa;
+}
+
+.all-words {
+    display: inline;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    width: 500px;
+    margin: 0 auto;
+    padding: 0.2em;
+}
+
+.file-row {
+    display: flex;
+    width: 200px;
+    margin: 0 auto;
+    padding: 0.2em;
+    gap: 1em;
+}
+
+.winner-row {
+    width: 500px;
+    margin: 0 auto;
+    padding: 0.2em;
+}
+
+.center {
+    text-align: center;
+}
+
+/* NAV */
+
+.navbar {
+    background-color: #222;
+}
+
+.navbar a {
+    color: #fff;
+}
+
+.navbar li a:hover {
+    color: #222;
+}
+
+.navbar-brand:hover {
+    color: #df159b;
+}
+
+.navbar .active {
+    background-color: #444;
+}
+
+/* FORMS */
+
+.radio {
+    height: 20px;
+    width: 20px;
+}
+
+.input {
+    height: auto;
+    width: 500px;
+    margin: 0 auto;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+.check {
+    height: 20px;
+    width: 20px;
+    margin-bottom: 10px;
+}
+
+.dice {
+    margin-bottom: 2rem;
+}
+
+.label {
+    font-size: 20px;
+    color: #222;
+}
+
+.radio-div {
+    display: flex;
+    width: fit-content;
+}
+
+.finished {
+    margin-bottom: 5em;
+}
+
+.group {
+    display: flex;
+    padding: 0.2em;
+    justify-content: space-between;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 2rem;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tr-head {
+    background-color: #df159b;
+    color: #fff;
+}
+
+.th {
+    font-family: 'Poppins', sans-serif;
+}
+
+.td {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50rem;
+}
+
+.game-grid .dice {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.game-grid .scoreboard {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
